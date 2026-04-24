@@ -1,16 +1,16 @@
-# Billy Sambasi — Portfolio
+# Billy Sambasi Portfolio
 
 A personal portfolio website for Billy Sambasi, Data Scientist & Machine Learning Engineer. Built with Next.js, React, Tailwind CSS v4, and TypeScript.
 
 ## Features
 
-- **Hero section** — introduction with links to projects and GitHub profile
-- **Projects section** — dynamically fetches and displays public GitHub repositories via the GitHub API, sorted by stars
-- **About section** — background, skills, and technologies overview
-- **Contact/Footer** — social links (GitHub, LinkedIn, Twitter, Email)
-- **Responsive design** — mobile-friendly layout with a collapsible navbar
-- **Dark/Light mode** — automatically adapts to the user's OS theme preference
-- **Scroll animations** — elements animate into view as the user scrolls
+- **Hero section** - introduction with links to projects and GitHub profile
+- **Projects section** - dynamically fetches and displays public GitHub repositories via the GitHub API, sorted by stars
+- **About section** - background, skills, and technologies overview
+- **Contact/Footer** - social links (GitHub, LinkedIn, Twitter, Email)
+- **Responsive design** - mobile-friendly layout with a collapsible navbar
+- **Dark/Light mode** - automatically adapts to the user's OS theme preference
+- **Scroll animations** - elements animate into view as the user scrolls
 
 ## Tech Stack
 
