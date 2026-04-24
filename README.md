@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Billy Sambasi — Portfolio
+
+A personal portfolio website for Billy Sambasi, Data Scientist & Machine Learning Engineer. Built with Next.js, React, Tailwind CSS v4, and TypeScript.
+
+## Features
+
+- **Hero section** — introduction with links to projects and GitHub profile
+- **Projects section** — dynamically fetches and displays public GitHub repositories via the GitHub API, sorted by stars
+- **About section** — background, skills, and technologies overview
+- **Contact/Footer** — social links (GitHub, LinkedIn, Twitter, Email)
+- **Responsive design** — mobile-friendly layout with a collapsible navbar
+- **Dark/Light mode** — automatically adapts to the user's OS theme preference
+- **Scroll animations** — elements animate into view as the user scrolls
+
+## Tech Stack
+
+| Technology | Version |
+|---|---|
+| Next.js | 16.2.3 |
+| React | 19.2.4 |
+| Tailwind CSS | 4 |
+| TypeScript | 5 |
+| react-icons | 5.6.0 |
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- A GitHub account
+
+### Environment Variables
+
+Create a `.env.local` file in the root of the project:
+
+```bash
+NEXT_PUBLIC_GITHUB_USERNAME=your_github_username
+NEXT_PUBLIC_EMAIL=your_email@example.com
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
+
+### Installation
+
+```bash
+npm install
+```
+
+### Running Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+portfolio/
+├── app/
+│   ├── globals.css       # Global styles and Tailwind imports
+│   ├── layout.tsx        # Root layout with Navbar and Footer
+│   └── page.tsx          # Homepage
+├── components/
+│   ├── Hero.tsx          # Landing hero section
+│   ├── Navbar.tsx        # Responsive navigation bar
+│   ├── ProjectsSection.tsx  # GitHub repos grid
+│   ├── ProjectCard.tsx   # Individual project card
+│   ├── ProjectCardSkeleton.tsx  # Loading skeleton
+│   ├── AboutSection.tsx  # About me section
+│   ├── Footer.tsx        # Footer with social links
+│   └── ScrollAnimation.tsx  # Intersection Observer scroll wrapper
+└── lib/
+    └── github.ts         # GitHub API fetch utilities
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The easiest way to deploy is via [Vercel](https://vercel.com). Connect your GitHub repository and add the environment variables in the Vercel dashboard.
 
-## Deploy on Vercel
+```bash
+npm run build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Make sure to set the `NEXT_PUBLIC_*` environment variables in your hosting platform's settings.
