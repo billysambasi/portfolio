@@ -38,7 +38,7 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className="bg-slate-950 text-white">
+      <body className="transition-colors duration-300">
         <Navbar />
         {children}
         <Footer />

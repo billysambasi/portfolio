@@ -20,10 +20,10 @@ export default function ProjectCard({
   return (
     <div className="bg-slate-800 rounded-lg p-6 hover:shadow-xl hover:shadow-blue-500/20 transition-shadow duration-300 border border-slate-700 hover:border-blue-500">
       {/* Header with title and language */}
-      <div className="flex justify-between items-start mb-3">
-        <h3 className="text-xl font-bold text-white">{title}</h3>
+      <div className="flex justify-between items-start gap-2 mb-3">
+        <h3 className="text-xl font-bold text-white min-w-0 truncate">{title}</h3>
         {language && (
-          <span className="text-xs bg-blue-500 text-white px-3 py-1 rounded-full">
+          <span className="text-xs bg-blue-500 text-white px-3 py-1 rounded-full shrink-0">
             {language}
           </span>
         )}

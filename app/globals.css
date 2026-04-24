@@ -1,12 +1,25 @@
 @import "tailwindcss";
 
+:root {
+  --bg: #000000;
+  --text: #ffffff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f8fafc;
+    --text: #0f172a;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: rgb(15, 23, 42);
-  color: white;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button, a {
@@ -22,7 +35,7 @@ nav a {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(15, 23, 42);
+  background: var(--bg);
 }
 
 ::-webkit-scrollbar-thumb {
