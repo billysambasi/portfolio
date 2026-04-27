@@ -27,19 +27,17 @@ export default function Footer() {
   ]
 
   return (
-    <footer id="contact" className="bg-slate-950 text-white border-t border-slate-700 py-12">
+    <footer id="contact" className="bg-black text-white border-t border-zinc-800 py-12">
       <div className="max-w-6xl mx-auto px-6">
         {/* Main content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
             <h3 className="text-2xl font-bold mb-4">
-              <span className="text-blue-400">Billy</span>
-              <span className="text-slate-400">.dev</span>
+              <span className="text-white">billysambasi</span>
             </h3>
             <p className="text-slate-400">
-              Data Scientist & Machine Learning Engineer. Building AI solutions 
-              and innovating education.
+              Data Scientist and Machine Learning Engineer, specializing in analyzing data to design AI-driven solutions and develop machine learning models.
             </p>
           </div>
 
@@ -48,22 +46,22 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-slate-400">
               <li>
-                <a href="#" className="hover:text-blue-400 transition-colors">
+                <a href="#" className="hover:text-zinc-300 transition-colors">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#projects" className="hover:text-blue-400 transition-colors">
+                <a href="#projects" className="hover:text-zinc-300 transition-colors">
                   Projects
                 </a>
               </li>
               <li>
-                <a href="#about" className="hover:text-blue-400 transition-colors">
+                <a href="#about" className="hover:text-zinc-300 transition-colors">
                   About
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-blue-400 transition-colors">
+                <a href="#contact" className="hover:text-zinc-300 transition-colors">
                   Contact
                 </a>
               </li>
@@ -82,7 +80,7 @@ export default function Footer() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-2xl text-slate-400 hover:text-blue-400 transition-colors"
+                    className="text-2xl text-zinc-400 hover:text-white transition-colors"
                     aria-label={social.name}
                   >
                     <IconComponent />
@@ -94,7 +92,7 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-slate-700 my-8"></div>
+        <div className="border-t border-zinc-800 my-8"></div>
 
         {/* Bottom section */}
         <div className="flex flex-col md:flex-row justify-between items-center text-slate-400 text-sm">

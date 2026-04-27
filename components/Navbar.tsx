@@ -18,12 +18,12 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-slate-900 border-b border-slate-700 text-white z-50">
+    <nav className="fixed top-0 left-0 right-0 bg-black border-b border-zinc-800 text-white z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo/Brand */}
         <div className="text-2xl font-bold">
-          <span className="text-blue-400">Billy</span>
-          <span className="text-slate-400">.dev</span>
+          <span className="text-white">billysambasi</span>
+          <span className="text-zinc-400">-portfolio</span>
         </div>
 
         {/* Desktop Navigation Links */}
@@ -32,7 +32,7 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="hover:text-blue-400 transition-colors duration-200"
+              className="hover:text-zinc-300 transition-colors duration-200"
             >
               {link.name}
             </a>
@@ -45,7 +45,7 @@ export default function Navbar() {
             href={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 border border-blue-400 text-blue-400 rounded hover:bg-blue-400 hover:text-slate-900 transition-colors"
+            className="px-4 py-2 border border-zinc-400 text-zinc-400 rounded hover:bg-zinc-400 hover:text-black transition-colors"
           >
             GitHub
           </a>
@@ -63,13 +63,13 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-slate-800 border-t border-slate-700">
+        <div className="md:hidden bg-zinc-900 border-t border-zinc-800">
           <div className="px-6 py-4 space-y-4">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="block hover:text-blue-400 transition-colors duration-200"
+                className="block hover:text-zinc-300 transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
@@ -79,7 +79,7 @@ export default function Navbar() {
               href={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="block px-4 py-2 border border-blue-400 text-blue-400 rounded hover:bg-blue-400 hover:text-slate-900 transition-colors text-center"
+              className="block px-4 py-2 border border-zinc-400 text-zinc-400 rounded hover:bg-zinc-400 hover:text-black transition-colors text-center"
             >
               GitHub
             </a>

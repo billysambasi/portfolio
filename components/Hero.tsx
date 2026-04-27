@@ -1,10 +1,10 @@
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    <section className="min-h-screen flex items-center justify-center bg-black text-white">
       <div className="text-center max-w-4xl mx-auto px-6">
         {/* Main heading */}
         <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
-          Hi, I&apos;m <span className="text-blue-400">Billy Sambasi</span>
+          Hi, I&apos;m <span className="text-white">Billy Sambasi</span>
         </h1>
 
         {/* Subtitle */}
@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#projects"
-            className="px-8 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg font-semibold transition-colors"
+            className="px-8 py-3 bg-zinc-700 hover:bg-zinc-600 rounded-lg font-semibold transition-colors"
           >
             View My Projects
           </a>
@@ -30,7 +30,7 @@ export default function Hero() {
             href="https://github.com/billysambasi"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-3 border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900 rounded-lg font-semibold transition-colors"
+            className="px-8 py-3 border-2 border-zinc-400 text-zinc-400 hover:bg-zinc-400 hover:text-black rounded-lg font-semibold transition-colors"
           >
             GitHub Profile
           </a>

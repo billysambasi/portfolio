@@ -1,6 +1,6 @@
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-slate-900 text-white">
+    <section id="about" className="py-20 bg-zinc-900 text-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left side - Text */}
@@ -13,9 +13,8 @@ export default function AboutSection() {
             </p>
 
             <p className="text-lg text-slate-300 mb-4 leading-relaxed">
-              My expertise spans across machine learning model development, data analysis, 
-              predictive modeling, and curriculum innovation. Skilled in 
-              building and deploying machine learning models, managing datasets, and 
+              My expertise spans across machine learning model development, data analysis, and 
+              predictive modeling. Skilled in building and deploying machine learning models, managing datasets, and 
               delivering practical solutions that would enhance organizational efficiency. 
               Proficient at bridging technical expertise with administrative leadership to drive 
               innovation, inclusivity, and impact in all sectors. I'm particularly interested in 
@@ -33,7 +32,7 @@ export default function AboutSection() {
               <div className="grid grid-cols-2 gap-4">
                 {/* Column 1 */}
                 <div>
-                  <h4 className="font-semibold text-blue-400 mb-2">Data Science</h4>
+                  <h4 className="font-semibold text-white mb-2">Data Science</h4>
                   <ul className="text-slate-400 space-y-1 text-sm">
                     <li>• Python & Pandas</li>
                     <li>• Machine Learning</li>
@@ -44,7 +43,7 @@ export default function AboutSection() {
 
                 {/* Column 2 */}
                 <div>
-                  <h4 className="font-semibold text-blue-400 mb-2">Development</h4>
+                  <h4 className="font-semibold text-white mb-2">Development</h4>
                   <ul className="text-slate-400 space-y-1 text-sm">
                     <li>• Python</li>
                     <li>• JavaScript/React</li>
@@ -55,7 +54,7 @@ export default function AboutSection() {
 
                 {/* Column 3 */}
                 <div>
-                  <h4 className="font-semibold text-blue-400 mb-2">Tools & Platforms</h4>
+                  <h4 className="font-semibold text-white mb-2">Tools & Platforms</h4>
                   <ul className="text-slate-400 space-y-1 text-sm">
                     <li>• Jupyter Notebook</li>
                     <li>• TensorFlow</li>
@@ -66,9 +65,8 @@ export default function AboutSection() {
 
                 {/* Column 4 */}
                 <div>
-                  <h4 className="font-semibold text-blue-400 mb-2">Specializations</h4>
+                  <h4 className="font-semibold text-white mb-2">Specializations</h4>
                   <ul className="text-slate-400 space-y-1 text-sm">
-                    <li>• EdTech Solutions</li>
                     <li>• AI Implementation</li>
                     <li>• Model Deployment</li>
                   </ul>
@@ -81,23 +79,22 @@ export default function AboutSection() {
           <div className="space-y-6">
             {/* Stats boxes */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-colors">
-                <p className="text-4xl font-bold text-blue-400 mb-2">10+</p>
+              <div className="bg-zinc-800 p-6 rounded-lg border border-zinc-700 hover:border-zinc-500 transition-colors">
+                <p className="text-4xl font-bold text-white mb-2">10+</p>
                 <p className="text-slate-400">Projects Completed</p>
               </div>
 
-              <div className="bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-colors">
-                <p className="text-4xl font-bold text-blue-400 mb-2">3+</p>
+              <div className="bg-zinc-800 p-6 rounded-lg border border-zinc-700 hover:border-zinc-500 transition-colors">
+                <p className="text-4xl font-bold text-white mb-2">3+</p>
                 <p className="text-slate-400">Years Experience</p>
               </div>
             </div>
 
             {/* Highlight box */}
-            <div className="bg-gradient-to-br from-blue-500/10 to-slate-800/50 border border-blue-500/20 rounded-lg p-6">
-              <h4 className="text-lg font-semibold text-blue-400 mb-3">Currently</h4>
+            <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-6">
+              <h4 className="text-lg font-semibold text-white mb-3">Currently</h4>
               <p className="text-slate-300 mb-4">
-                Working on innovative EdTech solutions and exploring the intersection 
-                of AI, data science, and educational transformation.
+                Working on exploring the nexus of AI, data science, and technological integration and transformation.
               </p>
               <p className="text-sm text-slate-400">
                 <span className="inline-block w-2 h-2 bg-green-400 rounded-full mr-2"></span>

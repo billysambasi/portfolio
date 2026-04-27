@@ -29,7 +29,7 @@ export default function ProjectsSection() {
   }, [])
 
   return (
-    <section id="projects" className="py-20 bg-slate-950 text-white">
+    <section id="projects" className="py-20 bg-black text-white">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section heading */}
         <h2 className="text-5xl font-bold mb-4 text-center">My Projects</h2>
@@ -40,9 +40,11 @@ export default function ProjectsSection() {
 
         {/* Loading state */}
         {loading && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex gap-6 overflow-x-auto pb-4">
             {[1, 2, 3, 4, 5, 6].map((i) => (
-              <ProjectCardSkeleton key={i} />
+              <div key={i} className="shrink-0 w-80 h-72">
+                <ProjectCardSkeleton />
+              </div>
             ))}
           </div>
         )}
@@ -52,19 +54,20 @@ export default function ProjectsSection() {
           <p className="text-center text-red-400">{error}</p>
         )}
 
-        {/* Projects grid */}
+        {/* Projects horizontal scroll */}
         {!loading && !error && projects.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-thin">
             {projects.map((project) => (
-              <ProjectCard
-                key={project.id}
-                title={project.name}
-                description={project.description}
-                link={project.html_url}
-                language={project.language}
-                stars={project.stargazers_count}
-                forks={project.forks_count}
-              />
+              <div key={project.id} className="snap-start shrink-0 w-80">
+                <ProjectCard
+                  title={project.name}
+                  description={project.description}
+                  link={project.html_url}
+                  language={project.language}
+                  stars={project.stargazers_count}
+                  forks={project.forks_count}
+                />
+              </div>
             ))}
           </div>
         )}
