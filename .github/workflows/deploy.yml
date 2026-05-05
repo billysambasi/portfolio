@@ -30,9 +30,10 @@ jobs:
         run: npm run build
         env:
           EXPORT_MODE: true
-          NEXT_PUBLIC_GITHUB_USERNAME: ${{ secrets.NEXT_PUBLIC_GITHUB_USERNAME }}
-          NEXT_PUBLIC_EMAIL: ${{ secrets.NEXT_PUBLIC_EMAIL }}
-          NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NEXT_PUBLIC_GITHUB_USERNAME: ${{ vars.NEXT_PUBLIC_GITHUB_USERNAME || 'billysambasi' }}
+          NEXT_PUBLIC_EMAIL: ${{ vars.NEXT_PUBLIC_EMAIL || 'bnsambasi@gmail.com' }}
+          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL || 'https://billysambasi.github.io/portfolio' }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
