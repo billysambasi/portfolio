@@ -6,7 +6,7 @@ export interface GithubRepo {
   language: string | null
   stargazers_count: number
   forks_count: number
-  topics: string[]
+  topics?: string[]
   updated_at: string
   archived: boolean
 }
@@ -16,7 +16,9 @@ export async function getGithubRepos(username: string): Promise<GithubRepo[]> {
     const response = await fetch(
       `https://api.github.com/users/${username}/repos?sort=stars&per_page=10&type=owner`,
       {
-        next: { revalidate: 3600 },
+        headers: {
+          'Accept': 'application/vnd.github.mercy-preview+json',
+        },
       }
     )
 
@@ -25,11 +27,7 @@ export async function getGithubRepos(username: string): Promise<GithubRepo[]> {
     }
 
     const repos = await response.json()
-
-    // Filter out archived repos only (remove the topics filter)
-    return repos.filter(
-      (repo: GithubRepo) => !repo.archived
-    )
+    return repos.filter((repo: GithubRepo) => !repo.archived)
   } catch (error) {
     console.error('Failed to fetch GitHub repos:', error)
     return []
@@ -38,9 +36,7 @@ export async function getGithubRepos(username: string): Promise<GithubRepo[]> {
 
 export async function getGithubUserInfo(username: string) {
   try {
-    const response = await fetch(`https://api.github.com/users/${username}`, {
-      next: { revalidate: 3600 },
-    })
+    const response = await fetch(`https://api.github.com/users/${username}`)
 
     if (!response.ok) {
       throw new Error(`GitHub API error: ${response.statusText}`)

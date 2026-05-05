@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
   ...(isPagesExport && {
     output: 'export',
     basePath: '/portfolio',
+    images: { unoptimized: true },
   }),
 };
 
