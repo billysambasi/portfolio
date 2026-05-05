@@ -39,10 +39,10 @@ nav a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(59, 130, 246);
+  background: rgb(82, 82, 82);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(37, 99, 235);
+  background: rgb(120, 120, 120);
 }
